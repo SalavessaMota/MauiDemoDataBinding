@@ -14,30 +14,29 @@ namespace MauiDemoDataBinding.Models
         private decimal _preco;
         private int _estoque;
 
-        public string Nome 
-        { 
-            get => _nome; 
+        public string Nome
+        {
+            get => _nome;
             set
             {
                 _nome = value;
                 OnPropertyChanged();
             }
-            
         }
 
-        public decimal Preco 
-        { 
-            get => _preco; 
+        public decimal Preco
+        {
+            get => _preco;
             set
             {
                 _preco = value;
                 OnPropertyChanged();
-            } 
+            }
         }
 
-        public int Estoque 
-        { 
-            get => _estoque; 
+        public int Estoque
+        {
+            get => _estoque;
             set
             {
                 _estoque = value;

@@ -4,29 +4,27 @@ namespace MauiDemoDataBinding.Pages;
 
 public partial class NotifyBinding : ContentPage
 {
-	Produto produto = new Produto();
+    private Produto _produto = new Produto();
 
-	public NotifyBinding()
-	{
-		InitializeComponent();
-		produto = new Produto
-		{
-			Nome = "IPhone 14",
-			Preco = 1250.00m,
-			Estoque = 5
-		};
+    public NotifyBinding()
+    {
+        InitializeComponent();
+        _produto = new Produto
+        {
+            Nome = "IPhone 14",
+            Preco = 1250.00m,
+            Estoque = 5
+        };
 
-		BindingContext = produto;
-
-	}
+        BindingContext = _produto;
+    }
 
     private async void btnAtualiza_Clicked(object sender, EventArgs e)
     {
-		produto.Nome = "Samsung Galaxy Fold5";
-		produto.Preco = 1500.00m;
-		produto.Estoque = 10;
+        _produto.Nome = "Samsung Galaxy Fold5";
+        _produto.Preco = 1500.00m;
+        _produto.Estoque = 10;
 
-		await DisplayAlert("Produto Atualizado", $"{produto.Nome} - {produto.Preco} - {produto.Estoque}", "OK");
-
+        await DisplayAlert("Produto Atualizado", $"{_produto.Nome} - {_produto.Preco} - {_produto.Estoque}", "OK");
     }
 }
